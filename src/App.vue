@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+// import { RouterView } from "vue-router";
 
 const showModal = ref(false);
 const newNote = ref("");
@@ -52,6 +53,8 @@ const addNote = () => {
       </div>
     </div>
   </main>
+
+  <!-- <RouterView /> -->
 </template>
 
 <style scoped>
