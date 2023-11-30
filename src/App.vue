@@ -11,7 +11,7 @@ const getRandomColor = () => {
   return "hsl(" + Math.random() * 360 + ", 100%, 75%)";
 }
 const getUniqueId = () => {
-  return 'id-' + Math.random().toString(36).substring(2, 16); 
+  return 'id-' + Math.random().toString(36).substring(2, 16);
 }
 
 const addNote = () => {
@@ -35,7 +35,7 @@ const addNote = () => {
     <div v-if="showModal" class="overlay">
       <div class="modal">
         <p class="close" @click="showModal = false">x</p>
-        <textarea v-model.trim="newNote" />
+        <textarea v-model.trim="newNote" name="note-body" />
         <p class="error" v-if="errorMsg">{{ errorMsg }}</p>
         <button @click="addNote">Add Note</button>
       </div>
@@ -170,9 +170,10 @@ main {
   border-radius: 15px;
   margin-bottom: 10px;
   background-color: rgb(193, 15, 15);
-  
+
 }
-.modal .error{
+
+.modal .error {
   font-size: 20px;
   z-index: 100000;
   cursor: pointer;
