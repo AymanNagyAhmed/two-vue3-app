@@ -4,6 +4,7 @@ import AboutView from "@/views/AboutView.vue";
 import NotFound from "@/views/NotFound.vue";
 import QuizzesView from "@/views/Quiz/QuizzesView.vue";
 import QuizView from "@/views/Quiz/QuizzesView.vue";
+import Test from "@/components/Test.vue";
 
 const routes = [
   // { path: "/", name: "home", component: HomeView, alias: "/home" },
@@ -22,6 +23,11 @@ const routes = [
     path: "/about",
     name: "about",
     component: AboutView,
+  },
+  {
+    path: "/test",
+    name: "test",
+    component: Test,
   },
   {
     path: "/:notFound",
