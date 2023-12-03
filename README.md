@@ -1,29 +1,72 @@
-# notes-app
+Title
+===
+Two VueJs apps
+## Information
+- Title:  `Two VueJs apps`
+- Authors:  `AYMAN NAGY AHMED`
+- Preprint: [https://arxiv.org/abs/xx]()
 
-This template should help get you started developing with Vue 3 in Vite.
+## References
+- [quizzes app]()
+- [notes app]()
 
-## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Install & Dependence
+- nodejs
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Use
+- switch to one of this branches (quizes-app, notes-app)
+  ```
+  $ git checkout quizes-app
 
-## Project Setup
+  $ npm install
 
-```sh
-npm install
+  $ npm run dev -- --port 3000
+  ```
+
+## Directory Hierarchy
 ```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
+|—— .gitignore
+|—— index.html
+|—— package-lock.json
+|—— package.json
+|—— postcss.config.js
+|—— public
+|    |—— favicon.ico
+|—— src
+|    |—— App.vue
+|    |—— assets
+|        |—— index.css
+|    |—— components
+|        |—— Card.vue
+|        |—— Question.vue
+|        |—— QuizHeader.vue
+|        |—— Result.vue
+|        |—— Test.vue
+|    |—— data
+|        |—— quizzes.json
+|    |—— main.js
+|    |—— router
+|        |—— index.js
+|    |—— views
+|        |—— AboutView.vue
+|        |—— HomeView.vue
+|        |—— NotFound.vue
+|        |—— Quiz
+|            |—— QuizView.vue
+|            |—— QuizzesView.vue
+|—— tailwind.config.js
+|—— vite.config.js
 ```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+## Code Details
+### Tested Platform
+- software
+  ```
+  OS: Debian unstable (May 2023), Ubuntu LTS
+  Nodejs: 20.09.0
+  npm: 10.1.0
+  ```
+  
+## License
+MIT
