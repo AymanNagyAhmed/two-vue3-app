@@ -3,7 +3,7 @@ import HomeView from "@/views/HomeView.vue";
 import AboutView from "@/views/AboutView.vue";
 import NotFound from "@/views/NotFound.vue";
 import QuizzesView from "@/views/Quiz/QuizzesView.vue";
-import QuizView from "@/views/Quiz/QuizzesView.vue";
+import QuizView from "@/views/Quiz/QuizView.vue";
 import Test from "@/components/Test.vue";
 
 const routes = [

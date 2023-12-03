@@ -2,7 +2,7 @@
 import { ref, watch } from "vue";
 import q from "@/data/quizzes.json";
 import Card from "@/components/Card.vue"
-// import gsap from "gsap"
+import gsap from "gsap"
 
 const quizzes = ref(q)
 const search = ref("")
@@ -17,23 +17,27 @@ const beforeEnter = (el) => {
 }
 
 const enter = (el) => {
-    // gsap.to(el, {
-    //     duration: 1,
-    //     y: 0,
-    //     opacity: 1,
-    //     delay: el.dataset.index * 0.2
-    // })
+    gsap.to(el, {
+        duration: 1,
+        y: 0,
+        opacity: 1,
+        delay: el.dataset.index * 0.2
+    })
 }
-
-</script>
-  
+</script> 
 <template>
     <div>
-        <header>
-            <h1>quizzes</h1>
-            <input v-model.trim="search" type="text" placeholder="Search...">
+        <header class="my-6 flex flex-col items-start  ">
+            <h1 class="font-bold mr-6  sm:text-xl lg:text-lg">Quizzes</h1>
+            <div class="relative">
+                <input v-model.trim="search" type="text" class="p-1 rounded z-0 focus:shadow focus:outline-none"
+                    placeholder="Search...">
+                <div class="absolute top-4 right-3">
+                    <i class="fa fa-search text-gray-400 z-20 hover:text-gray-500"></i>
+                </div>
+            </div>
         </header>
-        <div class="options-container">
+        <div class="container flex flex-wrap justify-evenly">
             <TransitionGroup @before-enter="beforeEnter" @enter="enter" appear>
                 <Card v-for="(quiz, index) in quizzes" :key="quiz.id" :quiz="quiz" :data-index="index" />
             </TransitionGroup>
@@ -42,30 +46,7 @@ const enter = (el) => {
 </template>
   
 <style scoped>
-header {
-    margin-bottom: 10px;
-    margin-top: 30px;
-    display: flex;
-    align-items: center;
-}
-
-header h1 {
-    font-weight: bold;
-    margin-right: 30px;
-}
-
 header input {
-    border: none;
     background-color: rgba(128, 128, 128, 0.1);
-    padding: 10px;
-    border-radius: 5px;
 }
-
-.options-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 40px;
-}
-
-/* CARD */
 </style>

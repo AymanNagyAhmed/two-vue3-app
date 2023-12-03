@@ -11,6 +11,12 @@ export default {
       //   "2xl": "6rem",
       // },
     },
+    fontSize: {
+      sm: ['14px', '20px'],
+      base: ['16px', '24px'],
+      lg: ['20px', '28px'],
+      xl: ['24px', '32px'],
+    },
     extend: {
       aspectRatio: {
         "4/3": "4 / 3",
